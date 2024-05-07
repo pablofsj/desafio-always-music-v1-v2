@@ -5,8 +5,7 @@ import { estudianteModel } from '../models/estudiante.model.js'
 
 const todosEstudiantes = async (req, res) => {
     try {
-        const {rut} = req.params
-        const estudiantes = await estudianteModel.obtenerTodos(rut)
+        const estudiantes = await estudianteModel.obtenerTodos()
         return res.json(estudiantes)
         
     } catch (error) {
